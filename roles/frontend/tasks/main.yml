@@ -30,11 +30,11 @@
 #     path: "/usr/share/nginx/html"
 #     state: directory
 
-- name: Extract frontend code
-  ansible.builtin.unarchive:
-    src: /tmp/frontend.zip
-    dest: /usr/share/nginx/html/
-    remote_src: true #when sourec file is in remote server, then only u need to use remote_src: yes. the default behaviour of ansible is it will copy the file form ansible server(source server) to target server(remote server)
+# - name: Extract frontend code
+#   ansible.builtin.unarchive:
+#     src: /tmp/frontend.zip
+#     dest: /usr/share/nginx/html/
+#     remote_src: true #when sourec file is in remote server, then only u need to use remote_src: yes. the default behaviour of ansible is it will copy the file form ansible server(source server) to target server(remote server)
 
 - name: Copy frontend servcie file to the dest
   ansible.builtin.template:
