@@ -1,5 +1,8 @@
 - name: Deploy the mysql
   hosts: mysql
   become: yes
+  vars_files:
+    - /var/credentails_mysql.yml
+
   roles:
     - mysql
