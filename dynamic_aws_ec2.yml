@@ -1,0 +1,16 @@
+plugin: amazon.aws.aws_ec2
+# Specify your target AWS regions
+regions:
+  - us-east-1
+filters:
+  instance-state-name: running
+  tag:Name: nginx
+
+# Set the variable used for connection (defaults to private IP if not specified)
+hostnames:
+  - private-ip-address # Falls back to Private IP
+
+compose:
+  # Use the private IP address to connect to the host
+  # (note: this does not modify inventory_hostname, which is set via I(hostnames))
+  ansible_host: private_ip_address
