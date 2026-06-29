@@ -1,0 +1,5 @@
+- name: Deploy the frontend app
+  hosts: frontend
+  become: yes
+  roles:
+    - frontend
