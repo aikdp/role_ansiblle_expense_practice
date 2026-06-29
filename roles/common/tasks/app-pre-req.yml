@@ -2,7 +2,7 @@
   ansible.builtin.file:
     path: "{{ app_path }}"
     state: absent
-  igonre_errors: true
+  ignore_errors: true
 
 - name: Create {{ component }} directory
   ansible.builtin.file:
