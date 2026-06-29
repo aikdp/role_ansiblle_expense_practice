@@ -3,14 +3,20 @@
     path: "{{ app_path }}"
     state: absent
   ignore_errors: true
+  tags:
+    - development
 
 - name: Create {{ component }} directory
   ansible.builtin.file:
     path: "{{ app_path }}"
     state: directory
+  tags:
+    - development
 
 - name: Extract the {{ component }} code and adding dest dir
   ansible.builtin.unarchive:
     src: "https://expense-builds.s3.us-east-1.amazonaws.com/expense-{{ component }}-v2.zip"
     dest: "{{ app_path }}"
     remote_src: yes
+  tags:
+    - development

@@ -42,6 +42,8 @@
   ansible.builtin.command: npm install
   args:
     chdir: /app
+  tags:
+    - development
 
 - name: Copy backend service file
   ansible.builtin.template:
@@ -64,6 +66,8 @@
     login_host: "{{ host_login }}"
   notify:
     - Reload systemd and restart my service
+  tags:
+    - development
 
 # - name: Reload systemd and restart my service
 #   ansible.builtin.systemd_service:
