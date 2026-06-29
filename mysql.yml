@@ -2,7 +2,7 @@
   hosts: mysql
   become: yes
   vars_files:
-    - /var/credentials_mysql.yml
+    - /var/credentials_mysql.yml  #this is ansible-server(source), need to keep inside source server or where ansible running
 
   roles:
     - mysql

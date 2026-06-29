@@ -1,5 +1,7 @@
 - name: Deploy the backend code
   hosts: backend
   become: yes
+  vars_files:
+    - /var/credentials_mysql.yml
   roles:
     - backend
