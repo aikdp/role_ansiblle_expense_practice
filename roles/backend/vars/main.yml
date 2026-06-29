@@ -1,4 +1,4 @@
 # host_login: "mysql.telugudevops.online"
-# mysql_root_password: "ExpenseApp@1"
+# mysql_passowrd: "ExpenseApp@1"
 component: backend
 app_path: /app

@@ -60,7 +60,7 @@
     state: import
     target: /app/schema/backend.sql
     login_user: root
-    login_password: "{{ mysql_root_password }}"
+    login_password: "{{ mysql_passowrd }}"
     login_host: "{{ host_login }}"
   notify:
     - Reload systemd and restart my service
