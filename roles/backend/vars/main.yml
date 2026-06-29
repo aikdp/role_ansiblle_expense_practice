@@ -1,2 +1,4 @@
 host_dns: "mysql.telugudevops.online"
 mysql_root_password: "ExpenseApp@1"
+component: backend
+app_path: /app
